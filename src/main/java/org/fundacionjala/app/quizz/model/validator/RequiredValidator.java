@@ -8,8 +8,8 @@ public class RequiredValidator implements Validator {
 
     @Override
     public void validate(String value, String conditionValue, List<String> errors) {
-        if (value == null || value.equals("")) {
+        if (value == null && value.equals("")) {
             errors.add(ERROR_MESSAGE);
-        }
+            }
     }
 }
